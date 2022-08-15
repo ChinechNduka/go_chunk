@@ -81,11 +81,13 @@
                             src="{% static 'images/down.png' %}" alt="" class="drop-down" id="dropdown-icon-2">
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu-2">
-                        <h3><a href="{% url 'base:documentation_getting_started' %}#signin">Sign in to the dashboard</a></h3>
+                        <h3><a href="{% url 'base:documentation_getting_started' %}#signin">Sign in to the dashboard</a>
+                        </h3>
                         <h3><a href="{% url 'base:documentation_getting_started' %}#chunk_your_file">Chunk
                                 your CSV/JSON files</a></h3>
                         <h3><a href="{% url 'base:documentation_getting_started' %}#file_format">File Formats</a></h3>
-                        <h3><a href="{% url 'base:documentation_getting_started' %}#manage_account">Manage your user account</a></h3>
+                        <h3><a href="{% url 'base:documentation_getting_started' %}#manage_account">Manage your user
+                                account</a></h3>
                     </div>
                     <div class="intro-dropdown">
                         <li><a href="{% url 'base:documentation_dashboard' %}">Dashboard</a></li><img
@@ -115,7 +117,51 @@
 
             {% endblock content %}
 
+            <div class="menu-items" id="menuItems">
+                <div class="menu-items-nav">
+                    <i class="fa fa-xmark" id="close-icon"></i>
+                </div>
+                <ul>
+                    <div class="intro-dropdown-mobile">
+                        <li><a href="{% url 'base:documentation_intro' %}">Introduction</a></li><img
+                            src="{% static 'images/down.png' %}" alt="" class="drop-down">
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu-mobile-1">
+                        <h3><a href="{% url 'base:documentation_intro' %}#features">Features</a></h3>
+                        <h3><a href="{% url 'base:documentation_intro' %}#getting_started">Getting
+                                Started</a></h3>
+                    </div>
+                    </li>
+                    <div class="intro-dropdown-mobile">
+                        <li><a href="">Dashboard</a></li><img src="{% static 'images/down.png' %}" alt=""
+                            class="drop-down">
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu-mobile-2">
+                        <h3><a href="{% url 'base:documentation_dashboard' %}#uploading">Uploading file</a></h3>
+                        <h3><a href="{% url 'base:documentation_dashboard' %}#chunking">Chunking
+                                Options</a></h3>
+                        <h3><a href="{% url 'base:documentation_dashboard' %}#saving">Saving your file</a></h3>
+                        <h3><a href="{% url 'base:documentation_dashboard' %}#frontend">font-end</a></h3>
+                    </div>
+                    <div class="intro-dropdown-mobile">
+                        <li><a href="">Database</a></li><img src="{% static 'images/down.png' %}" alt=""
+                            class="drop-down">
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu-mobile-2">
+                        <h3><a href="{% url 'base:documentation_dashboard' %}#frontend">How chunking is done</a></h3>
+                        <h3><a href="{% url 'base:splitted_files' %}">The
+                                Database
+                                settings
+                            </a></h3>
+                    </div>
+                    <li><a href="{% url 'base:faq' %}">Frequently Asked Questions</a></li>
+                    <li><a href="{% url 'base:contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'base:home' %}">Website</a></li>
+                    <li><a href="{% url 'base:privacy' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'base:t_c' %}">Terms of Use</a></li>
 
+                </ul>
+            </div>
         </div>
 
         <script src="{% static 'js/documentation.js' %}"></script>
