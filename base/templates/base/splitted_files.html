@@ -16,9 +16,6 @@
       <table id="dashboard--saved--table">
         <tr id="table--title">
           <th>File Name</th>
-          <!-- <th>Size</th> -->
-          <!-- <th>Split Sizes</th> -->
-          <!-- <th>Numbers</th> -->
           <th>Date Saved</th>
           <th>Status</th>
         </tr>
@@ -26,13 +23,9 @@
         {% if "temp/" in file.file.url %}
         <tr class="table--items">
           <td class="table--items--file">
-            <input type="checkbox" name="checkbox" class="checkbox" />
-            <!-- <img src="../images/Group 293.png" alt="green tick"> -->
             <span>{{file.file | cut:'temp/'}}</span>
           </td>
-          <!-- <td>100mb</td>
-                    <td>10</td>
-                    <td>10</td> -->
+   
           <td>
             <p>{{file.upload_time | date:"D d M Y"}} {{ file.upload_time | time:"P" }}</p>
           </td>
@@ -48,12 +41,8 @@
         <tr class="table--items">
           <td class="table--items--file">
             <input type="checkbox" name="checkbox" class="checkbox" />
-            <!-- <img src="../images/Group 293.png" alt="green tick"> -->
             <span>{{file.file | cut:'media/'}}</span>
           </td>
-          <!-- <td>100mb</td>
-                                                    <td>10</td>
-                                                    <td>10</td> -->
           <td>
             <p>{{file.upload_time | date:"D d M Y"}} {{ file.upload_time | time:"P" }}</p>
           </td>
